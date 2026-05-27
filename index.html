@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Primary Meta Tags -->
-  <meta name="title" content="Pocket-Dentist: Benchmarking Compact Vision-Language Models for Dental Image Understanding">
-  <meta name="description" content="A large-scale multimodal benchmark and deployment pipeline for dental VLMs. 7 datasets, 71K+ images, 14 models, on-device deployment on iPhone 17 Pro.">
-  <meta name="keywords" content="dental AI, vision-language model, VLM benchmark, dental imaging, on-device deployment, LoRA, panoramic radiograph, intraoral photograph, mobile AI, medical AI">
+  <meta name="title"
+    content="Pocket-Dentist: Benchmarking Compact Vision-Language Models for Dental Image Understanding">
+  <meta name="description"
+    content="A large-scale multimodal benchmark and deployment pipeline for dental VLMs. 7 datasets, 71K+ images, 14 models, on-device deployment on iPhone 17 Pro.">
+  <meta name="keywords"
+    content="dental AI, vision-language model, VLM benchmark, dental imaging, on-device deployment, LoRA, panoramic radiograph, intraoral photograph, mobile AI, medical AI">
   <meta name="author" content="Kai Bian, Xucheng Guo, Yiran Shen, Ting Dang, Hong Jia">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
@@ -16,7 +20,8 @@
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Pocket-Dentist">
   <meta property="og:title" content="Pocket-Dentist: Benchmarking Compact VLMs for Dental Image Understanding">
-  <meta property="og:description" content="A large-scale multimodal benchmark and deployment pipeline for dental VLMs. 7 datasets, 71K+ images, 14 models evaluated.">
+  <meta property="og:description"
+    content="A large-scale multimodal benchmark and deployment pipeline for dental VLMs. 7 datasets, 71K+ images, 14 models evaluated.">
   <!-- TODO: Update URL after GitHub Pages deployment -->
   <meta property="og:url" content="https://pocket-dentist.github.io/">
   <meta property="og:image" content="https://pocket-dentist.github.io/static/images/data_overview.png">
@@ -26,11 +31,13 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Pocket-Dentist: Benchmarking Compact VLMs for Dental Image Understanding">
-  <meta name="twitter:description" content="A large-scale multimodal benchmark and deployment pipeline for dental VLMs.">
+  <meta name="twitter:description"
+    content="A large-scale multimodal benchmark and deployment pipeline for dental VLMs.">
   <meta name="twitter:image" content="https://pocket-dentist.github.io/static/images/data_overview.png">
 
   <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="Pocket-Dentist: Benchmarking Compact Vision-Language Models for Dental Image Understanding">
+  <meta name="citation_title"
+    content="Pocket-Dentist: Benchmarking Compact Vision-Language Models for Dental Image Understanding">
   <meta name="citation_author" content="Bian, Kai">
   <meta name="citation_author" content="Guo, Xucheng">
   <meta name="citation_author" content="Shen, Yiran">
@@ -50,8 +57,10 @@
   <!-- CSS -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
@@ -71,36 +80,128 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZBTXHT0KQ6"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-ZBTXHT0KQ6');
   </script>
 
   <!-- Custom Styles -->
   <style>
-    .benchmark-table { overflow-x: auto; margin: 1.5rem 0; }
-    .benchmark-table table { font-size: 0.85rem; white-space: nowrap; border-collapse: collapse; width: 100%; }
-    .benchmark-table th { background-color: #f5f5f5; font-weight: 600; padding: 8px 10px; text-align: center; border-bottom: 2px solid #dbdbdb; }
-    .benchmark-table td { padding: 6px 10px; text-align: center; border-bottom: 1px solid #ededed; }
-    .benchmark-table .tier-label { font-weight: 700; text-align: left; background-color: #fafafa; vertical-align: middle; }
-    .benchmark-table .model-name { text-align: left; font-weight: 500; }
-    .benchmark-table .mean-row td { font-style: italic; color: #666; border-top: 1px solid #ccc; }
-    .best-val { font-weight: 700; color: #1a73e8; }
+    .benchmark-table {
+      overflow-x: auto;
+      margin: 1.5rem 0;
+    }
 
-    .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
-    .stat-card { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 12px; padding: 1.2rem; text-align: center; }
-    .stat-card .stat-number { font-size: 1.8rem; font-weight: 800; line-height: 1; }
-    .stat-card .stat-label { font-size: 0.85rem; opacity: 0.9; margin-top: 0.3rem; }
+    .benchmark-table table {
+      font-size: 0.85rem;
+      white-space: nowrap;
+      border-collapse: collapse;
+      width: 100%;
+    }
 
-    .deployment-card { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; justify-content: center; }
-    .deployment-card img { max-width: 260px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.15); }
+    .benchmark-table th {
+      background-color: #f5f5f5;
+      font-weight: 600;
+      padding: 8px 10px;
+      text-align: center;
+      border-bottom: 2px solid #dbdbdb;
+    }
 
-    .highlight-box { background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border-left: 4px solid #1a73e8; padding: 1rem 1.5rem; border-radius: 0 8px 8px 0; margin: 1rem 0; }
+    .benchmark-table td {
+      padding: 6px 10px;
+      text-align: center;
+      border-bottom: 1px solid #ededed;
+    }
 
-    .author-block { display: inline-block; margin: 0 8px; }
-    .author-block a { color: #4a4a4a; }
-    .author-block a:hover { color: #1a73e8; }
-    .author-affil { font-size: 0.9rem; color: #666; }
+    .benchmark-table .tier-label {
+      font-weight: 700;
+      text-align: left;
+      background-color: #fafafa;
+      vertical-align: middle;
+    }
+
+    .benchmark-table .model-name {
+      text-align: left;
+      font-weight: 500;
+    }
+
+    .benchmark-table .mean-row td {
+      font-style: italic;
+      color: #666;
+      border-top: 1px solid #ccc;
+    }
+
+    .best-val {
+      font-weight: 700;
+      color: #1a73e8;
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .stat-card {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border-radius: 12px;
+      padding: 1.2rem;
+      text-align: center;
+    }
+
+    .stat-card .stat-number {
+      font-size: 1.8rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .stat-card .stat-label {
+      font-size: 0.85rem;
+      opacity: 0.9;
+      margin-top: 0.3rem;
+    }
+
+    .deployment-card {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .deployment-card img {
+      max-width: 260px;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      border-left: 4px solid #1a73e8;
+      padding: 1rem 1.5rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1rem 0;
+    }
+
+    .author-block {
+      display: inline-block;
+      margin: 0 8px;
+    }
+
+    .author-block a {
+      color: #4a4a4a;
+    }
+
+    .author-block a:hover {
+      color: #1a73e8;
+    }
+
+    .author-affil {
+      font-size: 0.9rem;
+      color: #666;
+    }
   </style>
 
   <!-- Structured Data -->
@@ -123,232 +224,520 @@
   }
   </script>
 </head>
+
 <body>
 
   <main id="main-content">
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Pocket-Dentist</h1>
-            <h2 class="subtitle is-3" style="margin-top: -0.5rem; color: #555;">
-              Benchmarking Compact Vision-Language Models<br>for Dental Image Understanding
-            </h2>
-
-            <div class="is-size-5 publication-authors">
-              <span class="author-block"><a href="#">Kai Bian</a><sup>*1</sup>,</span>
-              <span class="author-block"><a href="#">Xucheng Guo</a><sup>*2</sup>,</span>
-              <span class="author-block"><a href="#">Yiran Shen</a><sup>2</sup>,</span>
-              <span class="author-block"><a href="#">Ting Dang</a><sup>3</sup>,</span>
-              <span class="author-block"><a href="https://h-jia.github.io/" target="_blank">Hong Jia</a><sup>&dagger;1</sup></span>
-            </div>
-
-            <div class="is-size-6 publication-authors author-affil">
-              <span class="author-block"><sup>1</sup>The University of Auckland &nbsp;</span>
-              <span class="author-block"><sup>2</sup>Shandong University &nbsp;</span>
-              <span class="author-block"><sup>3</sup>The University of Melbourne</span>
-              <br>
-              <span class="eql-cntrb"><small><sup>*</sup>Equal Contribution &nbsp; <sup>&dagger;</sup>Corresponding Author</small></span>
-            </div>
-
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
             <div class="column has-text-centered">
-              <div class="publication-links">
-                <!-- TODO: Update arXiv ID -->
-                <span class="link-block">
-                  <a href="#" class="external-link button is-normal is-rounded is-dark" title="Coming soon"
-                    data-track="paper">
-                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                    <span>Paper</span>
-                  </a>
-                </span>
-                <span class="link-block">
-                  <a href="https://github.com/Pocket-Dentist/Pocket-Dentist-Bench" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark"
-                    data-track="code">
-                    <span class="icon"><i class="fab fa-github"></i></span>
-                    <span>Code</span>
-                  </a>
-                </span>
-                <span class="link-block">
-                  <a href="https://huggingface.co/datasets/Pocket-Dentist/Pocket-Dentist-Bench" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark"
-                    data-track="dataset">
-                    <span class="icon"><i class="fas fa-database"></i></span>
-                    <span>Dataset</span>
-                  </a>
-                </span>
+              <h1 class="title is-1 publication-title">Pocket-Dentist</h1>
+              <h2 class="subtitle is-3" style="margin-top: -0.5rem; color: #555;">
+                Benchmarking Compact Vision-Language Models<br>for Dental Image Understanding
+              </h2>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">Kai Bian<sup>*1</sup>,</span>
+                <span class="author-block">Xucheng Guo<sup>*2</sup>,</span>
+                <span class="author-block">Yiran Shen<sup>2</sup>,</span>
+                <span class="author-block">Ting Dang<sup>3</sup>,</span>
+                <span class="author-block"><a href="https://h-jia.github.io/" target="_blank">Hong
+                    Jia</a><sup>&dagger;1</sup></span>
+              </div>
+
+              <div class="is-size-6 publication-authors author-affil">
+                <span class="author-block"><sup>1</sup>The University of Auckland &nbsp;</span>
+                <span class="author-block"><sup>2</sup>Shandong University &nbsp;</span>
+                <span class="author-block"><sup>3</sup>The University of Melbourne</span>
+                <br>
+                <span class="eql-cntrb"><small><sup>*</sup>Equal Contribution &nbsp; <sup>&dagger;</sup>Corresponding
+                    Author</small></span>
+              </div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <span class="link-block">
+                    <a href="#" target="_blank" class="external-link button is-normal is-rounded is-dark"
+                      data-track="paper">
+                      <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
+                  <!-- <span class="link-block">
+                    <a href="#" target="_blank" class="external-link button is-normal is-rounded is-dark"
+                      data-track="code">
+                      <span class="icon"><i class="fab fa-github"></i></span>
+                      <span>Code</span>
+                    </a>
+                  </span> -->
+                  <span class="link-block">
+                    <a href="https://huggingface.co/datasets/Pocket-Dentist/Pocket-Dentist-Bench" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark" data-track="dataset">
+                      <span class="icon"><i class="fas fa-database"></i></span>
+                      <span>Dataset</span>
+                    </a>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Key Stats -->
-  <section class="hero is-small">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="stat-grid">
-          <div class="stat-card">
-            <div class="stat-number">6,000+</div>
-            <div class="stat-label">Patients</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">71,000+</div>
-            <div class="stat-label">Images</div>
-          </div>
-          <div class="stat-card" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
-            <div class="stat-number">14</div>
-            <div class="stat-label">VLMs Evaluated</div>
-          </div>
-          <div class="stat-card" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
-            <div class="stat-number">7</div>
-            <div class="stat-label">Dental Datasets</div>
-          </div>
-          <div class="stat-card" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
-            <div class="stat-number">6.67s</div>
-            <div class="stat-label">On-Device Latency</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Abstract -->
-  <section class="section hero is-light">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Abstract</h2>
-          <div class="content has-text-justified">
-            <p>
-              Dental image understanding is emerging as an important application area for VLMs, but current evaluation remains fragmented across modality-specific datasets, isolated task definitions, and metrics that rarely account for deployment constraints. As a result, it remains unclear whether VLMs can provide reliable dental image understanding across heterogeneous modalities and tasks while remaining practical for resource-constrained deployment. We present <strong>Pocket-Dentist</strong>, a large-scale multimodal benchmark and deployment pipeline for dental VLMs. We curate and standardize seven dental datasets into a unified vision–language benchmark comprising more than 6,000 patients, 71,000 images, four imaging modalities, six task types, and 14 evaluation metrics. On this benchmark, we evaluate 14 VLMs under zero-shot, few-shot, and LoRA fine-tuning settings, including 12 open-weight models under a uniform LoRA adaptation budget. The results show that zero-shot and few-shot performance is fragmented across modalities and tasks, whereas dental-domain LoRA adaptation enables compact VLMs to become competitive with substantially larger models. In particular, <strong>Qwen3-VL-4B achieves the strongest overall performance</strong> among compact models and matches or outperforms larger open-weight models (7B–32B) on most primary task metrics. We further deploy a LoRA-tuned Qwen3-VL-4B (<strong>Pocket-Dentist-4B</strong>) on a commodity smartphone, achieving <strong>6.67s per-sample inference</strong> while keeping all computation local to the device.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Data Overview -->
-  <section class="hero is-small">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <h2 class="title is-3 has-text-centered">Benchmark Overview</h2>
-        <img src="static/images/data_overview.png" alt="Pocket-Dentist Benchmark Overview" loading="lazy" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-        <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
-          <strong>Figure 1:</strong> Overview of the Pocket-Dentist benchmark datasets and task formulations.
-        </h2>
-      </div>
-    </div>
-  </section>
-
-  <!-- Pipeline -->
-  <section class="section hero is-light">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <h2 class="title is-3 has-text-centered">Evaluation Pipeline</h2>
-        <img src="static/images/pipeline.png" alt="Pocket-Dentist Pipeline" loading="lazy" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-        <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
-          <strong>Figure 2:</strong> Deploy-aware evaluation pipeline of Pocket-Dentist.
-        </h2>
-      </div>
-    </div>
-  </section>
-
-  <!-- Benchmark Results -->
-  <section class="hero is-small">
-    <div class="hero-body">
-      <div class="container" style="max-width: 1200px;">
-        <h2 class="title is-3 has-text-centered">Zero-Shot Benchmark Results</h2>
-        <p class="has-text-centered" style="margin-bottom: 1rem; color: #666;">
-          <strong class="best-val">Bold blue</strong> = best in tier. ↑ higher is better; MAE ↓ lower is better.
-        </p>
-        <div class="benchmark-table">
-          <table>
-            <thead>
-              <tr>
-                <th>Tier</th><th>Model</th><th>BRAR Acc↑</th><th>BRAR F1↑</th><th>DR F1w↑</th><th>Meta VQA↑</th><th>Meta Cap↑</th><th>Meta Cls↑</th><th>Aariz VQA↑</th><th>Aariz CVM↑</th><th>COde Cls↑</th><th>DenPAR Arch↑</th><th>DenPAR Site↑</th><th>DenPAR MAE↓</th><th>Caries Det↑</th><th>Caries Cls↑</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td class="tier-label" rowspan="5">Large VLMs<br>(≥7B)</td>
-                <td class="model-name">Lingshu-32B</td><td>0.49</td><td class="best-val">0.39</td><td>0.60</td><td>0.63</td><td>0.18</td><td>0.34</td><td>0.26</td><td>0.13</td><td>0.48</td><td>0.59</td><td class="best-val">0.53</td><td>0.88</td><td>0.56</td><td>0.16</td></tr>
-              <tr><td class="model-name">MedMO-8B-Next</td><td>0.26</td><td>0.19</td><td>0.53</td><td>0.49</td><td>0.09</td><td>0.08</td><td>0.21</td><td>0.05</td><td>0.26</td><td>0.61</td><td>0.29</td><td>2.90</td><td>0.59</td><td>0.84</td></tr>
-              <tr><td class="model-name">Qwen2.5-VL-7B</td><td>0.27</td><td>0.17</td><td>0.32</td><td>0.45</td><td>0.15</td><td>0.23</td><td>0.20</td><td>0.00</td><td>0.50</td><td>0.40</td><td>0.35</td><td>1.01</td><td>0.63</td><td>0.14</td></tr>
-              <tr><td class="model-name">gemini-2.0-flash</td><td class="best-val">0.57</td><td>0.37</td><td>0.00</td><td>0.63</td><td>0.18</td><td class="best-val">0.36</td><td>0.29</td><td class="best-val">0.25</td><td>0.54</td><td>0.84</td><td>0.45</td><td class="best-val">0.42</td><td>0.50</td><td>0.12</td></tr>
-              <tr><td class="model-name">gemini-2.5-flash</td><td>0.27</td><td>0.26</td><td class="best-val">0.62</td><td>0.66</td><td>0.14</td><td>0.24</td><td>0.23</td><td>0.12</td><td class="best-val">0.58</td><td class="best-val">0.99</td><td>0.51</td><td>0.47</td><td>0.54</td><td>0.13</td></tr>
-              <tr><td class="tier-label" rowspan="9">Compact VLMs<br>(≤4B)</td>
-                <td class="model-name">Qwen3.5-4B</td><td>0.17</td><td>0.10</td><td>0.54</td><td class="best-val">0.82</td><td>0.10</td><td>0.16</td><td>0.17</td><td>0.04</td><td>0.11</td><td>0.40</td><td>0.19</td><td>3.02</td><td>0.49</td><td>0.18</td></tr>
-              <tr><td class="model-name">Qwen3-VL-4B</td><td>0.44</td><td>0.37</td><td>0.24</td><td>0.58</td><td class="best-val">0.20</td><td>0.22</td><td>0.23</td><td>0.08</td><td>0.54</td><td>0.44</td><td>0.23</td><td>0.42</td><td>0.63</td><td>0.58</td></tr>
-              <tr><td class="model-name">gemma-4-E4B-it</td><td>0.56</td><td>0.24</td><td>0.61</td><td>0.59</td><td>0.18</td><td>0.31</td><td>0.31</td><td>0.04</td><td>0.51</td><td>0.40</td><td>0.51</td><td>0.52</td><td>0.43</td><td>0.30</td></tr>
-              <tr><td class="model-name">medgemma-4b-it</td><td>0.44</td><td>0.33</td><td>0.57</td><td>0.54</td><td>0.14</td><td>0.16</td><td class="best-val">0.40</td><td>0.03</td><td>0.27</td><td>0.40</td><td>0.23</td><td>0.89</td><td>0.52</td><td>0.11</td></tr>
-              <tr><td class="model-name">paligemma2-3b</td><td>0.10</td><td>0.06</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.20</td><td>0.03</td><td>0.00</td><td>0.00</td><td>0.18</td><td>0.89</td><td class="best-val">0.64</td><td>0.00</td></tr>
-              <tr><td class="model-name">SmolVLM2-2.2B</td><td>0.56</td><td>0.35</td><td>0.56</td><td>0.00</td><td>0.10</td><td>0.15</td><td>0.23</td><td>0.05</td><td>0.10</td><td>0.60</td><td>0.10</td><td>0.89</td><td>0.44</td><td class="best-val">0.92</td></tr>
-              <tr><td class="model-name">InternVL3.5-2B</td><td>0.50</td><td>0.27</td><td>0.09</td><td>0.15</td><td>0.00</td><td>0.00</td><td>0.37</td><td>0.00</td><td>0.14</td><td>0.40</td><td>0.22</td><td>3.21</td><td>0.36</td><td>0.12</td></tr>
-              <tr><td class="model-name">gemma-4-E2B-it</td><td>0.56</td><td>0.24</td><td>0.24</td><td>0.48</td><td>0.15</td><td>0.25</td><td>0.39</td><td>0.03</td><td>0.50</td><td>0.27</td><td>0.23</td><td>0.73</td><td>0.61</td><td>0.11</td></tr>
-              <tr><td class="model-name">InternVL3.5-1B</td><td>0.26</td><td>0.14</td><td>0.62</td><td>0.34</td><td>0.00</td><td>0.00</td><td>0.21</td><td>0.07</td><td>0.14</td><td>0.28</td><td>0.19</td><td>2.27</td><td>0.61</td><td>0.11</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- On-Device Deployment -->
-  <section class="section hero is-light">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <h2 class="title is-3 has-text-centered">On-Device Deployment</h2>
-        <p class="has-text-centered" style="margin-bottom: 1.5rem;">
-          LoRA-tuned VLMs deployed on <strong>iPhone 17 Pro</strong> (A19 Pro, 12 GB) via Metal-accelerated inference. 100% local.
-        </p>
-        <div class="deployment-card">
-          <div style="flex: 1; min-width: 300px;">
-            <div class="benchmark-table">
-              <table>
-                <thead><tr><th>Model</th><th>Latency (s) ↓</th><th>TTFT (s) ↓</th><th>OTPS (t/s) ↑</th><th>RAM (GB) ↓</th></tr></thead>
-                <tbody>
-                  <tr><td class="model-name"><strong>Pocket-Dentist-4B</strong></td><td>6.67</td><td>1.22</td><td>17.07</td><td>4.09</td></tr>
-                  <tr><td class="model-name">InternVL3.5-2B</td><td class="best-val">4.74</td><td class="best-val">0.78</td><td class="best-val">29.47</td><td class="best-val">2.62</td></tr>
-                  <tr><td class="model-name">Qwen2.5-VL-7B</td><td>24.06</td><td>2.29</td><td>9.60</td><td>6.22</td></tr>
-                </tbody>
-              </table>
+    <!-- Key Stats -->
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="stat-grid">
+            <div class="stat-card">
+              <div class="stat-number">6,000+</div>
+              <div class="stat-label">Patients</div>
             </div>
-            <div class="highlight-box">
-              <strong>Pocket-Dentist-4B</strong> achieves a <strong>3.6×</strong> latency reduction vs. the 7B baseline while maintaining competitive accuracy.
+            <div class="stat-card">
+              <div class="stat-number">71,000+</div>
+              <div class="stat-label">Images</div>
+            </div>
+            <div class="stat-card" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+              <div class="stat-number">14</div>
+              <div class="stat-label">VLMs Evaluated</div>
+            </div>
+            <div class="stat-card" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+              <div class="stat-number">7</div>
+              <div class="stat-label">Dental Datasets</div>
+            </div>
+            <div class="stat-card" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+              <div class="stat-number">6.67s</div>
+              <div class="stat-label">On-Device Latency</div>
             </div>
           </div>
-          <img src="static/images/deployment.png" alt="Pocket-Dentist iOS app" loading="lazy">
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Key Findings -->
-  <section class="hero is-small">
-    <div class="hero-body">
+    <!-- Abstract -->
+    <section class="section hero is-light">
       <div class="container is-max-desktop">
-        <h2 class="title is-3 has-text-centered">Key Findings</h2>
-        <div class="content">
-          <ul>
-            <li>🔍 <strong>Zero-shot fragmentation</strong> — No single model dominates across all dental tasks.</li>
-            <li>📈 <strong>LoRA adaptation closes the gap</strong> — Compact VLMs become competitive with larger models.</li>
-            <li>🏆 <strong>Qwen3-VL-4B is the strongest compact model</strong> — Matches or outperforms 7B–32B models after LoRA.</li>
-            <li>📱 <strong>Pocket-Dentist-4B runs locally</strong> — 6.67s latency, 4.09 GB RAM, 100% offline on iPhone 17 Pro.</li>
-            <li>🏥 <strong>Medical pre-training ≠ dental performance</strong> — Dental-domain LoRA is more effective.</li>
-          </ul>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                Dental image understanding is emerging as an important application area for VLMs, but current evaluation
+                remains fragmented across modality-specific datasets, isolated task definitions, and metrics that rarely
+                account for deployment constraints. As a result, it remains unclear whether VLMs can provide reliable
+                dental image understanding across heterogeneous modalities and tasks while remaining practical for
+                resource-constrained deployment. We present <strong>Pocket-Dentist</strong>, a large-scale multimodal
+                benchmark and deployment pipeline for dental VLMs. We curate and standardize seven dental datasets into
+                a unified vision–language benchmark comprising more than 6,000 patients, 71,000 images, four imaging
+                modalities, six task types, and 14 evaluation metrics. On this benchmark, we evaluate 14 VLMs under
+                zero-shot, few-shot, and LoRA fine-tuning settings, including 12 open-weight models under a uniform LoRA
+                adaptation budget. The results show that zero-shot and few-shot performance is fragmented across
+                modalities and tasks, whereas dental-domain LoRA adaptation enables compact VLMs to become competitive
+                with substantially larger models. In particular, <strong>Qwen3-VL-4B achieves the strongest overall
+                  performance</strong> among compact models and matches or outperforms larger open-weight models
+                (7B–32B) on most primary task metrics. We further deploy a LoRA-tuned Qwen3-VL-4B
+                (<strong>Pocket-Dentist-4B</strong>) on a commodity smartphone, achieving <strong>6.67s per-sample
+                  inference</strong> while keeping all computation local to the device.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- BibTeX — uncomment after arXiv publication -->
-  <!--
+    <!-- Data Overview -->
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <h2 class="title is-3 has-text-centered">Benchmark Overview</h2>
+          <img src="static/images/data_overview.png" alt="Pocket-Dentist Benchmark Overview" loading="lazy"
+            style="width: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+          <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
+            <strong>Figure 1:</strong> Overview of the Pocket-Dentist benchmark datasets and task formulations.
+          </h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pipeline -->
+    <section class="section hero is-light">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <h2 class="title is-3 has-text-centered">Evaluation Pipeline</h2>
+          <img src="static/images/pipeline.png" alt="Pocket-Dentist Pipeline" loading="lazy"
+            style="width: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+          <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
+            <strong>Figure 2:</strong> Deploy-aware evaluation pipeline of Pocket-Dentist.
+          </h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benchmark Results -->
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container" style="max-width: 1200px;">
+          <h2 class="title is-3 has-text-centered">Zero-Shot Benchmark Results</h2>
+          <p class="has-text-centered" style="margin-bottom: 1rem; color: #666;">
+            <strong class="best-val">Bold blue</strong> = best in tier. ↑ higher is better; MAE ↓ lower is better.
+          </p>
+          <div class="benchmark-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Tier</th>
+                  <th>Model</th>
+                  <th>BRAR Acc↑</th>
+                  <th>BRAR F1↑</th>
+                  <th>DR F1w↑</th>
+                  <th>Meta VQA↑</th>
+                  <th>Meta Cap↑</th>
+                  <th>Meta Cls↑</th>
+                  <th>Aariz VQA↑</th>
+                  <th>Aariz CVM↑</th>
+                  <th>COde Cls↑</th>
+                  <th>DenPAR Arch↑</th>
+                  <th>DenPAR Site↑</th>
+                  <th>DenPAR MAE↓</th>
+                  <th>Caries Det↑</th>
+                  <th>Caries Cls↑</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="tier-label" rowspan="5">Large VLMs<br>(≥7B)</td>
+                  <td class="model-name">Lingshu-32B</td>
+                  <td>0.49</td>
+                  <td class="best-val">0.39</td>
+                  <td>0.60</td>
+                  <td>0.63</td>
+                  <td>0.18</td>
+                  <td>0.34</td>
+                  <td>0.26</td>
+                  <td>0.13</td>
+                  <td>0.48</td>
+                  <td>0.59</td>
+                  <td class="best-val">0.53</td>
+                  <td>0.88</td>
+                  <td>0.56</td>
+                  <td>0.16</td>
+                </tr>
+                <tr>
+                  <td class="model-name">MedMO-8B-Next</td>
+                  <td>0.26</td>
+                  <td>0.19</td>
+                  <td>0.53</td>
+                  <td>0.49</td>
+                  <td>0.09</td>
+                  <td>0.08</td>
+                  <td>0.21</td>
+                  <td>0.05</td>
+                  <td>0.26</td>
+                  <td>0.61</td>
+                  <td>0.29</td>
+                  <td>2.90</td>
+                  <td>0.59</td>
+                  <td>0.84</td>
+                </tr>
+                <tr>
+                  <td class="model-name">Qwen2.5-VL-7B</td>
+                  <td>0.27</td>
+                  <td>0.17</td>
+                  <td>0.32</td>
+                  <td>0.45</td>
+                  <td>0.15</td>
+                  <td>0.23</td>
+                  <td>0.20</td>
+                  <td>0.00</td>
+                  <td>0.50</td>
+                  <td>0.40</td>
+                  <td>0.35</td>
+                  <td>1.01</td>
+                  <td>0.63</td>
+                  <td>0.14</td>
+                </tr>
+                <tr>
+                  <td class="model-name">gemini-2.0-flash</td>
+                  <td class="best-val">0.57</td>
+                  <td>0.37</td>
+                  <td>0.00</td>
+                  <td>0.63</td>
+                  <td>0.18</td>
+                  <td class="best-val">0.36</td>
+                  <td>0.29</td>
+                  <td class="best-val">0.25</td>
+                  <td>0.54</td>
+                  <td>0.84</td>
+                  <td>0.45</td>
+                  <td class="best-val">0.42</td>
+                  <td>0.50</td>
+                  <td>0.12</td>
+                </tr>
+                <tr>
+                  <td class="model-name">gemini-2.5-flash</td>
+                  <td>0.27</td>
+                  <td>0.26</td>
+                  <td class="best-val">0.62</td>
+                  <td>0.66</td>
+                  <td>0.14</td>
+                  <td>0.24</td>
+                  <td>0.23</td>
+                  <td>0.12</td>
+                  <td class="best-val">0.58</td>
+                  <td class="best-val">0.99</td>
+                  <td>0.51</td>
+                  <td>0.47</td>
+                  <td>0.54</td>
+                  <td>0.13</td>
+                </tr>
+                <tr>
+                  <td class="tier-label" rowspan="9">Compact VLMs<br>(≤4B)</td>
+                  <td class="model-name">Qwen3.5-4B</td>
+                  <td>0.17</td>
+                  <td>0.10</td>
+                  <td>0.54</td>
+                  <td class="best-val">0.82</td>
+                  <td>0.10</td>
+                  <td>0.16</td>
+                  <td>0.17</td>
+                  <td>0.04</td>
+                  <td>0.11</td>
+                  <td>0.40</td>
+                  <td>0.19</td>
+                  <td>3.02</td>
+                  <td>0.49</td>
+                  <td>0.18</td>
+                </tr>
+                <tr>
+                  <td class="model-name">Qwen3-VL-4B</td>
+                  <td>0.44</td>
+                  <td>0.37</td>
+                  <td>0.24</td>
+                  <td>0.58</td>
+                  <td class="best-val">0.20</td>
+                  <td>0.22</td>
+                  <td>0.23</td>
+                  <td>0.08</td>
+                  <td>0.54</td>
+                  <td>0.44</td>
+                  <td>0.23</td>
+                  <td>0.42</td>
+                  <td>0.63</td>
+                  <td>0.58</td>
+                </tr>
+                <tr>
+                  <td class="model-name">gemma-4-E4B-it</td>
+                  <td>0.56</td>
+                  <td>0.24</td>
+                  <td>0.61</td>
+                  <td>0.59</td>
+                  <td>0.18</td>
+                  <td>0.31</td>
+                  <td>0.31</td>
+                  <td>0.04</td>
+                  <td>0.51</td>
+                  <td>0.40</td>
+                  <td>0.51</td>
+                  <td>0.52</td>
+                  <td>0.43</td>
+                  <td>0.30</td>
+                </tr>
+                <tr>
+                  <td class="model-name">medgemma-4b-it</td>
+                  <td>0.44</td>
+                  <td>0.33</td>
+                  <td>0.57</td>
+                  <td>0.54</td>
+                  <td>0.14</td>
+                  <td>0.16</td>
+                  <td class="best-val">0.40</td>
+                  <td>0.03</td>
+                  <td>0.27</td>
+                  <td>0.40</td>
+                  <td>0.23</td>
+                  <td>0.89</td>
+                  <td>0.52</td>
+                  <td>0.11</td>
+                </tr>
+                <tr>
+                  <td class="model-name">paligemma2-3b</td>
+                  <td>0.10</td>
+                  <td>0.06</td>
+                  <td>0.00</td>
+                  <td>0.00</td>
+                  <td>0.00</td>
+                  <td>0.00</td>
+                  <td>0.20</td>
+                  <td>0.03</td>
+                  <td>0.00</td>
+                  <td>0.00</td>
+                  <td>0.18</td>
+                  <td>0.89</td>
+                  <td class="best-val">0.64</td>
+                  <td>0.00</td>
+                </tr>
+                <tr>
+                  <td class="model-name">SmolVLM2-2.2B</td>
+                  <td>0.56</td>
+                  <td>0.35</td>
+                  <td>0.56</td>
+                  <td>0.00</td>
+                  <td>0.10</td>
+                  <td>0.15</td>
+                  <td>0.23</td>
+                  <td>0.05</td>
+                  <td>0.10</td>
+                  <td>0.60</td>
+                  <td>0.10</td>
+                  <td>0.89</td>
+                  <td>0.44</td>
+                  <td class="best-val">0.92</td>
+                </tr>
+                <tr>
+                  <td class="model-name">InternVL3.5-2B</td>
+                  <td>0.50</td>
+                  <td>0.27</td>
+                  <td>0.09</td>
+                  <td>0.15</td>
+                  <td>0.00</td>
+                  <td>0.00</td>
+                  <td>0.37</td>
+                  <td>0.00</td>
+                  <td>0.14</td>
+                  <td>0.40</td>
+                  <td>0.22</td>
+                  <td>3.21</td>
+                  <td>0.36</td>
+                  <td>0.12</td>
+                </tr>
+                <tr>
+                  <td class="model-name">gemma-4-E2B-it</td>
+                  <td>0.56</td>
+                  <td>0.24</td>
+                  <td>0.24</td>
+                  <td>0.48</td>
+                  <td>0.15</td>
+                  <td>0.25</td>
+                  <td>0.39</td>
+                  <td>0.03</td>
+                  <td>0.50</td>
+                  <td>0.27</td>
+                  <td>0.23</td>
+                  <td>0.73</td>
+                  <td>0.61</td>
+                  <td>0.11</td>
+                </tr>
+                <tr>
+                  <td class="model-name">InternVL3.5-1B</td>
+                  <td>0.26</td>
+                  <td>0.14</td>
+                  <td>0.62</td>
+                  <td>0.34</td>
+                  <td>0.00</td>
+                  <td>0.00</td>
+                  <td>0.21</td>
+                  <td>0.07</td>
+                  <td>0.14</td>
+                  <td>0.28</td>
+                  <td>0.19</td>
+                  <td>2.27</td>
+                  <td>0.61</td>
+                  <td>0.11</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- On-Device Deployment -->
+    <section class="section hero is-light">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <h2 class="title is-3 has-text-centered">On-Device Deployment</h2>
+          <p class="has-text-centered" style="margin-bottom: 1.5rem;">
+            LoRA-tuned VLMs deployed on <strong>iPhone 17 Pro</strong> (A19 Pro, 12 GB) via Metal-accelerated inference.
+            100% local.
+          </p>
+          <div class="deployment-card">
+            <div style="flex: 1; min-width: 300px;">
+              <div class="benchmark-table">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Model</th>
+                      <th>Latency (s) ↓</th>
+                      <th>TTFT (s) ↓</th>
+                      <th>OTPS (t/s) ↑</th>
+                      <th>RAM (GB) ↓</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="model-name"><strong>Pocket-Dentist-4B</strong></td>
+                      <td>6.67</td>
+                      <td>1.22</td>
+                      <td>17.07</td>
+                      <td>4.09</td>
+                    </tr>
+                    <tr>
+                      <td class="model-name">InternVL3.5-2B</td>
+                      <td class="best-val">4.74</td>
+                      <td class="best-val">0.78</td>
+                      <td class="best-val">29.47</td>
+                      <td class="best-val">2.62</td>
+                    </tr>
+                    <tr>
+                      <td class="model-name">Qwen2.5-VL-7B</td>
+                      <td>24.06</td>
+                      <td>2.29</td>
+                      <td>9.60</td>
+                      <td>6.22</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="highlight-box">
+                <strong>Pocket-Dentist-4B</strong> achieves a <strong>3.6×</strong> latency reduction vs. the 7B
+                baseline while maintaining competitive accuracy.
+              </div>
+            </div>
+            <img src="static/images/deployment.png" alt="Pocket-Dentist iOS app" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Findings -->
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <h2 class="title is-3 has-text-centered">Key Findings</h2>
+          <div class="content">
+            <ul>
+              <li>🔍 <strong>Zero-shot fragmentation</strong> — No single model dominates across all dental tasks.</li>
+              <li>📈 <strong>LoRA adaptation closes the gap</strong> — Compact VLMs become competitive with larger
+                models.</li>
+              <li>🏆 <strong>Qwen3-VL-4B is the strongest compact model</strong> — Matches or outperforms 7B–32B models
+                after LoRA.</li>
+              <li>📱 <strong>Pocket-Dentist-4B runs locally</strong> — 6.67s latency, 4.09 GB RAM, 100% offline on
+                iPhone 17 Pro.</li>
+              <li>🏥 <strong>Medical pre-training ≠ dental performance</strong> — Dental-domain LoRA is more effective.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BibTeX — uncomment after arXiv publication -->
+    <!--
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
@@ -370,8 +759,11 @@
         <div class="column is-8">
           <div class="content">
             <p>
-              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> adopted from <a href="https://nerfies.github.io" target="_blank">Nerfies</a>.
-              Licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>.
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> adopted from <a href="https://nerfies.github.io"
+                target="_blank">Nerfies</a>.
+              Licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC
+                BY-SA 4.0</a>.
             </p>
           </div>
         </div>
@@ -381,34 +773,35 @@
 
   <!-- Global Link Click Tracking -->
   <script>
-  document.addEventListener('click', function(e) {
-    // Find the closest <a> ancestor (handles clicks on child elements like <span>, <i>)
-    var link = e.target.closest('a');
-    if (!link || !link.href) return;
+    document.addEventListener('click', function (e) {
+      // Find the closest <a> ancestor (handles clicks on child elements like <span>, <i>)
+      var link = e.target.closest('a');
+      if (!link || !link.href) return;
 
-    // Option 1: Links with data-track="xxx" → custom event with label
-    var trackLabel = link.getAttribute('data-track');
-    if (trackLabel) {
-      gtag('event', 'click_resource', {
-        resource_type: trackLabel,
-        link_url: link.href
-      });
-      return;
-    }
-
-    // Option 2: All other external links → auto-tracked as outbound
-    try {
-      var linkHost = new URL(link.href).hostname;
-      if (linkHost && linkHost !== location.hostname) {
-        gtag('event', 'click_outbound', {
-          link_url: link.href,
-          link_domain: linkHost,
-          link_text: link.textContent.trim().substring(0, 100)
+      // Option 1: Links with data-track="xxx" → custom event with label
+      var trackLabel = link.getAttribute('data-track');
+      if (trackLabel) {
+        gtag('event', 'click_resource', {
+          resource_type: trackLabel,
+          link_url: link.href
         });
+        return;
       }
-    } catch(err) {}
-  });
+
+      // Option 2: All other external links → auto-tracked as outbound
+      try {
+        var linkHost = new URL(link.href).hostname;
+        if (linkHost && linkHost !== location.hostname) {
+          gtag('event', 'click_outbound', {
+            link_url: link.href,
+            link_domain: linkHost,
+            link_text: link.textContent.trim().substring(0, 100)
+          });
+        }
+      } catch (err) { }
+    });
   </script>
 
 </body>
+
 </html>
